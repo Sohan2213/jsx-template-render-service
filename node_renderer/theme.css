@@ -1,0 +1,73 @@
+:root {
+  --primary-color: #2E3192;
+  --text-color: #2E3192;
+  --font-family: Arial, sans-serif;
+  --font-size: 12px;
+  --bold-weight: 600;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  color: var(--text-color);
+}
+
+/* Section heading style */
+.section-header {
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: var(--bold-weight);
+  padding: 6px 12px;
+  margin-bottom: 8px;
+}
+
+/* Label and field line style */
+.field-label {
+  font-weight: 500;
+}
+
+.field-line {
+  border-bottom: 1px solid var(--primary-color);
+  min-height: 18px;
+}
+
+/* Checkbox design */
+.checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.checkbox-option {
+  display: flex;
+  align-items: center;
+  margin-right: 16px;
+}
+
+.checkbox-box {
+  width: 14px;
+  height: 14px;
+  border: 1px solid var(--primary-color);
+  margin-right: 5px;
+}
+
+.field-row {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 12px;
+}
+
+.field-label {
+  font-weight: bold;
+  font-size: 14px;
+  color: var(--primary-color);
+}
+
+input[type="checkbox"] {
+  margin-right: 6px;
+  transform: scale(1.2);
+}
+
+.checkbox-inline {
+  display: flex;
+  gap: 12px;
+}

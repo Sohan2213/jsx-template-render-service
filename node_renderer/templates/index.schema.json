@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PersonalDetailsForm",
+  "type": "object",
+  "properties": {
+    "gender": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["Male", "Female"]
+      }
+    },
+    "title": { "type": "string" },
+    "firstName": { "type": "string" },
+    "otherNames": { "type": "string" },
+    "lastName": { "type": "string" },
+    "maritalStatus": { "type": "string" },
+    "spouseName": { "type": "string" },
+    "dob": { "type": "string", "pattern": "^\\d{2}-\\d{2}-\\d{4}$" },
+    "maidenName": { "type": "string" },
+    "mothersMaidenName": { "type": "string" },
+    "idTypes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["Passport", "Driving Licence", "Employer ID", "National ID"]
+      }
+    },
+    "idOtherType": { "type": "string" },
+    "idNumber": { "type": "string" },
+    "issueDate": { "type": "string", "pattern": "^\\d{2}-\\d{2}-\\d{4}$" },
+    "expiryDate": { "type": "string", "pattern": "^\\d{2}-\\d{2}-\\d{4}$" },
+    "relatedToBankStaff": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["Yes"]
+      }
+    },
+    "relationshipType": { "type": "string" },
+    "bankStaffName": { "type": "string" }
+  },
+  "required": [
+    "gender",
+    "title",
+    "firstName",
+    "lastName",
+    "dob",
+    "idTypes",
+    "idNumber",
+    "issueDate",
+    "expiryDate"
+  ],
+  "additionalProperties": false
+}
