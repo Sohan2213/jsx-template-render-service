@@ -73,7 +73,13 @@ app.post('/render', async (req, res) => {
     return res.status(500).json({ error: `JSX render failed: ${err.message}` });
   }
 
-  // Launch Puppeteer and render
+  // If outputType is html, return HTML directly
+  if (outputType === 'html') {
+    res.setHeader('Content-Type', 'text/html');
+    return res.send(html);
+  }
+
+  // Launch Puppeteer and render for PDF/image
   let browser;
   try {
     browser = await puppeteer.launch({
