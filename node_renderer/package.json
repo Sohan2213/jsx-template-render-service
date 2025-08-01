@@ -17,7 +17,9 @@
     "react-dom": "^19.1.0"
   },
   "scripts": {
-    "tailwind:init": "tailwindcss init"
+    "build-css": "tailwindcss -c tailwind.config.js -i ./input.css -o ./theme.css --minify",
+    "watch-css": "tailwindcss -c tailwind.config.js -i ./input.css -o ./theme.css --watch",
+    "dev": "concurrently \"npm run watch-css\" \"node render.js\""
   },
   "devDependencies": {
     "tailwindcss": "^3.4.4"
