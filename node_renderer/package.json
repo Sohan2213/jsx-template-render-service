@@ -7,11 +7,19 @@
     "@babel/preset-react": "^7.27.1",
     "@babel/register": "^7.27.1",
     "ajv": "^8.17.1",
+    "autoprefixer": "^10.4.21",
     "express": "^4.18.2",
     "jsx-template-engine": "^1.0.1",
     "jsxte": "^3.3.1",
+    "postcss": "^8.5.6",
     "puppeteer": "^20.0.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
+  },
+  "scripts": {
+    "tailwind:init": "tailwindcss init"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.4"
   }
 }

@@ -1,16 +1,12 @@
 import Field from '../components/Field.jsx';
 import React from 'react';
-export default ({ data }) => (
+export default ({ data, themeCss }) => (
   <html>
     <head>
-      <style>{`
-        body { font-family: Arial; padding: 40px; }
-        .label { font-weight: bold; width: 150px; display: inline-block; }
-        .field { margin-bottom: 10px; }
-      `}</style>
+      <style dangerouslySetInnerHTML={{ __html: themeCss }} />
     </head>
-    <body>
-      <h1 style={{color: 'red', textAlign: 'center'}}>Onboarding Notice</h1>
+    <body className="font-sans p-10 bg-white">
+      <h1 className="text-4xl font-bold text-center text-red-200 mb-8">Onboarding Notice</h1>
       <Field label="Name" value={data.name} />
       <Field label="Amount" value={data.amount} />
     </body>
